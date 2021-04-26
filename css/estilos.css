@@ -12,10 +12,6 @@ header {
 	max-width: 1240px;
 	margin: auto;
 }
-/* NAVEGADOR */
-header nav {
-	/* max-width: 1000px; */
-}
 
 .menu_bar {
 	display: none;
@@ -103,7 +99,8 @@ div {
 	background-size: cover;
 	position: relative;
 	overflow: hidden;
-	height: 85vh;
+	min-height: 85vh;
+	height: 100%;
 	font-family: 'Source Sans Pro';
 }
 .element-background-overlay {
@@ -633,7 +630,6 @@ div {
 		padding: 70px 40px;
 	}
 	.element-info-section {
-		height: calc(80vh - 140px);
 		padding: 20px 0;
 	}
 	.element-info-section .button-info-section {
