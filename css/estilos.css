@@ -657,10 +657,6 @@ div {
 }
 /* PANTALLAS ENANAS */
 @media screen and (max-width: 325px) {
-	.element-info-section {
-		padding: 20px 0 0 0;
-		height: 70vh;
-	}
 }
 /* Fuentes */
 @font-face {
