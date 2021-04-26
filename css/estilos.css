@@ -33,15 +33,28 @@ header nav ul li {
 	padding: 0 10px;
 	align-items: center;
 }
+header nav ul li:first-child {
+	display: flex;
+	height: 45px;
+	background: #ee6253;
+	justify-content: center;
+}
 header nav ul li a {
-	color: rgb(170, 170, 170);
+	color: #fff;
 	display: block;
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 1.1em;
 	transition: all 0.2s;
+	padding: 5px 20px;
 }
-
+header nav ul li:first-child a {
+	text-align: right;
+	width: 100%;
+	color: #fff;
+	vertical-align: middle;
+	padding: 5px 0;
+}
 header nav ul li span {
 	margin-right: 10px;
 }

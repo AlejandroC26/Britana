@@ -4,6 +4,9 @@ btnMenu.addEventListener('click', function () {
 	menu.classList.toggle('mostrar');
 });
 
+$('.bt-close').click(function () {
+	menu.classList.toggle('mostrar');
+});
 const subMenuBtn = document.querySelectorAll('.submenu-btn');
 for (let i = 0; i < subMenuBtn.length; i++) {
 	subMenuBtn[i].addEventListener('click', function () {
