@@ -33,28 +33,18 @@ header nav ul li {
 	padding: 0 10px;
 	align-items: center;
 }
-header nav ul li:first-child {
-	display: flex;
-	height: 45px;
-	background: #ee6253;
-	justify-content: center;
+header nav ul li:first-child a {
+	display: none;
 }
 header nav ul li a {
-	color: #fff;
+	color: rgb(170, 170, 170);
 	display: block;
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 1.1em;
 	transition: all 0.2s;
-	padding: 5px 20px;
 }
-header nav ul li:first-child a {
-	text-align: right;
-	width: 100%;
-	color: #fff;
-	vertical-align: middle;
-	padding: 5px 0;
-}
+
 header nav ul li span {
 	margin-right: 10px;
 }
@@ -563,10 +553,26 @@ div {
 		height: auto;
 		float: none;
 	}
+	header nav ul li:first-child a {
+		display: block;
+		padding: 10px 5px;
+		text-align: right;
+	}
+	header nav ul li:first-child {
+		height: 35px;
+		border-bottom: 2px solid #fff;
+		margin-bottom: 20px;
+	}
 	header nav ul li {
 		/*El display block se usa para que el li abarque todo el bloque de ancho*/
 		display: block;
 		float: none;
+		height: 70px;
+	}
+	header nav ul li a {
+		color: #fff;
+		padding: 5px 20px;
+		height: calc(100% - 10px);
 	}
 	header,
 	.logo-nav {
