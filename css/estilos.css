@@ -649,9 +649,11 @@ div {
 	}
 	.element-info-section .info-tittle-section {
 		font-size: 2.5em;
+		line-height: 1em;
 	}
 	.element-info-section .info-subtittle-section {
 		font-size: 1.8em;
+		line-height: 1em;
 	}
 	.element-pading-section,
 	.body-info-section {
