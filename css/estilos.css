@@ -633,16 +633,12 @@ div {
 		padding: 20px 0;
 	}
 	.element-info-section .button-info-section {
-		position: absolute;
 		width: 230px;
 		bottom: 30px;
 	}
 }
 /* PANTALLAS PEQUEÑAS */
 @media screen and (max-width: 490px) {
-	.element-section {
-		height: 90vh;
-	}
 	.element-info-section .info-tittle-section {
 		font-size: 2.5em;
 		line-height: 1em;
