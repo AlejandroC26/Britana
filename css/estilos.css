@@ -92,13 +92,19 @@ div {
 .logo-nav .logo-img img {
 	height: 64px;
 }
+.wabe {
+	position: absolute;
+	bottom: -10px;
+	width: 100%;
+	z-index: 1000;
+	height: 150px;
+}
 /* SECCIONES */
 .element-section {
 	background-image: url(../img/backgrounds/school-1974369_1920.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-	overflow: hidden;
 	min-height: 85vh;
 	height: 100%;
 	font-family: 'Source Sans Pro';
@@ -114,6 +120,7 @@ div {
 }
 .element-pading-section {
 	padding: 150px 80px 0 80px;
+	display: flex;
 }
 .content-element-header-info {
 	max-width: 1440px;
@@ -122,6 +129,7 @@ div {
 .element-info-section {
 	padding: 0 50px;
 	position: relative;
+	margin-bottom: 100px;
 	z-index: 20;
 }
 .element-info-section .info-tittle-section {
@@ -631,10 +639,14 @@ div {
 	}
 	.element-info-section {
 		padding: 20px 0;
+		margin-bottom: 50px;
 	}
 	.element-info-section .button-info-section {
 		width: 230px;
 		bottom: 30px;
+	}
+	.wabe {
+		height: 100px;
 	}
 }
 /* PANTALLAS PEQUEÑAS */
