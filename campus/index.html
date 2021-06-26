@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Campus</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body class="sidebar-mini layout-fixed">
+		<div class="wrapper">
+			<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+				<button id="boton">Abc</button>
+			</nav>
+			<aside class="main-sidebar sidebar-dark-primary elevation-4"></aside>
+			<div id="sidebar-overlay"></div>
+		</div>
+	</body>
+	<script src="../plugins/jquery/js/jquery-3.2.1.min.js"></script>
+	<script>
+		function sidebarCollapse() {
+			side_state = $('.sidebar-mini').hasClass('sidebar-collapse');
+			if (side_state == true) {
+				$('.sidebar-mini').removeClass('sidebar-collapse');
+				if (screen.width < 1000) {
+					$('.sidebar-mini').removeClass('sidebar-closed');
+					$('.sidebar-mini').addClass('sidebar-open');
+				}
+			} else {
+				$('.sidebar-mini').addClass('sidebar-collapse');
+				if (screen.width < 1000) {
+					$('.sidebar-mini').removeClass('sidebar-open');
+					$('.sidebar-mini').addClass('sidebar-closed');
+				}
+			}
+		}
+		function slideOpenClose() {
+			$('.sidebar-mini').removeClass('sidebar-open');
+			$('.sidebar-mini').addClass('sidebar-closed');
+		}
+		$('#boton').click(function () {
+			sidebarCollapse();
+		});
+		$('#sidebar-overlay').click(function () {
+			sidebarCollapse();
+		});
+
+		if (screen.width >= 992) {
+			$('.sidebar-mini').removeClass('sidebar-open');
+			$('.sidebar-mini').removeClass('sidebar-closed');
+		} else {
+			$('.sidebar-mini').removeClass('sidebar-open');
+			$('.sidebar-mini').addClass('sidebar-closed');
+			$('.sidebar-mini').addClass('sidebar-collapse');
+		}
+		$(window).resize(function (e) {
+			ancho_pantalla = screen.width;
+			if (ancho_pantalla <= 992) {
+				$('.sidebar-mini').addClass('sidebar-collapse');
+				side_state = $('.sidebar-mini').hasClass('sidebar-open');
+				if (side_state == true) {
+					$('.sidebar-mini').removeClass('sidebar-open');
+					$('.sidebar-mini').addClass('sidebar-collapse');
+				} else {
+					$('.sidebar-mini').addClass('sidebar-closed');
+				}
+			} else {
+				$('.sidebar-mini').removeClass('sidebar-open');
+				$('.sidebar-mini').removeClass('sidebar-closed');
+				$('.sidebar-mini').removeClass('sidebar-collapse');
+			}
+		});
+	</script>
+</html>

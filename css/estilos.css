@@ -5,6 +5,8 @@
 .content-header {
 	padding: 0 100px;
 	display: block;
+	-webkit-box-shadow: 1px 1px 10px rgb(121, 121, 121);
+	-moz-box-shadow: 2px 2px 5px #999;
 }
 header {
 	display: block;
@@ -105,7 +107,6 @@ div {
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-	height: 90vh;
 	max-height: 704px;
 	font-family: 'Source Sans Pro';
 }
@@ -127,7 +128,7 @@ div {
 	margin: auto;
 }
 .element-info-section {
-	padding: 0 50px;
+	padding: 0 50px 50px 0;
 	position: relative;
 	margin-bottom: 100px;
 	z-index: 20;
@@ -158,6 +159,11 @@ div {
 	border-radius: 5px;
 	box-shadow: 0 0 10px #000;
 	bottom: 50px;
+	transition: all 0.2s;
+}
+.button-info-section:hover {
+	background: rgb(228, 64, 100);
+	cursor: pointer;
 }
 /* footer */
 
@@ -210,8 +216,6 @@ div {
 .container_submenu {
 	font-family: 'Meera Inimai';
 	list-style: none;
-	width: 70%;
-	margin: auto;
 	border-bottom: solid 1px #ff6958;
 }
 .rotate-item {
@@ -235,7 +239,7 @@ div {
 
 /* BLOQUE ÚNICO FOOTER*/
 .element-block-unic {
-	width: 70%;
+	width: 100%;
 	margin: auto;
 	background: #fff;
 	color: #5f5f5f;
@@ -300,6 +304,40 @@ div {
 }
 
 /* tarjeta */
+/*Tarjeta index*/
+.middle-box {
+	margin: 0 0 50px 0;
+}
+.middle-box .container-responsive-img {
+	width: 100%;
+	overflow: hidden;
+}
+.middle-box .tittle-box {
+	padding: 10px 0;
+	font-weight: bolder;
+	color: #001d5f;
+}
+.middle-box:last-child {
+	margin-top: 20px;
+}
+.login-button {
+	width: 100%;
+	height: 50px;
+	background: #001d5f;
+	color: white;
+	font-size: 1em;
+	font-family: 'Source Sans Pro';
+	font-weight: bold;
+	line-height: 1.44em;
+	border: none;
+	border-radius: 5px;
+	bottom: 50px;
+}
+.resalt-text {
+	font-size: 1.5em;
+	color: #ce002d;
+	font-weight: bold;
+}
 .container-target {
 	margin: 20px auto 0 auto;
 	display: block;
@@ -428,6 +466,11 @@ div {
 .legality {
 	display: block;
 }
+input,
+button {
+	outline: none;
+}
+
 @media (min-width: 1024px) {
 	.nav-bar {
 		display: none;
@@ -541,20 +584,21 @@ div {
 	}
 	header nav {
 		width: 80%;
-		height: 100%;
+		height: calc(100% - 45px);
 		left: -100%;
 		position: fixed;
 		top: 50px;
 		z-index: 80;
 		background: #ec7063;
 		border-radius: 0 0 10px 0;
+		overflow-y: scroll;
 	}
 	#menu {
 		transition: all 0.3s;
 	}
 	.mostrar {
 		left: 0;
-		overflow: hidden;
+		/* overflow: hidden; */
 		transition: all 0.3s;
 	}
 	header nav ul {
@@ -653,6 +697,9 @@ div {
 	.wabe {
 		height: 100px;
 	}
+	.element-section-footer {
+		padding: 20px 40px;
+	}
 }
 /* PANTALLAS PEQUEÑAS */
 @media screen and (max-width: 490px) {
@@ -674,68 +721,4 @@ div {
 }
 /* PANTALLAS ENANAS */
 @media screen and (max-width: 325px) {
-}
-/* Fuentes */
-@font-face {
-	font-family: 'Roboto Condensed';
-	font-style: normal;
-	font-weight: 400;
-	src: url('../fonts/roboto/roboto-condensed-v19-latin-regular.eot'); /* IE9 Compat Modes */
-	src: local(''),
-		url('../fonts/roboto/roboto-condensed-v19-latin-regular.eot?#iefix')
-			format('embedded-opentype'),
-		/* IE6-IE8 */
-			url('../fonts/roboto/roboto-condensed-v19-latin-regular.woff2')
-			format('woff2'),
-		/* Super Modern Browsers */
-			url('../fonts/roboto/roboto-condensed-v19-latin-regular.woff')
-			format('woff'),
-		/* Modern Browsers */
-			url('../fonts/roboto/roboto-condensed-v19-latin-regular.ttf')
-			format('truetype'),
-		/* Safari, Android, iOS */
-			url('../fonts/roboto/roboto-condensed-v19-latin-regular.svg#RobotoCondensed')
-			format('svg'); /* Legacy iOS */
-}
-@font-face {
-	font-family: 'Meera Inimai';
-	font-style: normal;
-	font-weight: 400;
-	src: url('../fonts/meera-inimai/meera-inimai-v7-latin-regular.eot'); /* IE9 Compat Modes */
-	src: local(''),
-		url('../fonts/meera-inimai/meera-inimai-v7-latin-regular.eot?#iefix')
-			format('embedded-opentype'),
-		/* IE6-IE8 */
-			url('../fonts/meera-inimai/meera-inimai-v7-latin-regular.woff2')
-			format('woff2'),
-		/* Super Modern Browsers */
-			url('../fonts/meera-inimai/meera-inimai-v7-latin-regular.woff')
-			format('woff'),
-		/* Modern Browsers */
-			url('../fonts/meera-inimai/meera-inimai-v7-latin-regular.ttf')
-			format('truetype'),
-		/* Safari, Android, iOS */
-			url('../fonts/meera-inimai/meera-inimai-v7-latin-regular.svg#MeeraInimai')
-			format('svg'); /* Legacy iOS */
-}
-@font-face {
-	font-family: 'Source Sans Pro';
-	font-style: normal;
-	font-weight: 400;
-	src: url('../fonts/source-sans/source-sans-pro-v14-latin-regular.eot'); /* IE9 Compat Modes */
-	src: local(''),
-		url('../fonts/source-sans/source-sans-pro-v14-latin-regular.eot?#iefix')
-			format('embedded-opentype'),
-		/* IE6-IE8 */
-			url('../fonts/source-sans/source-sans-pro-v14-latin-regular.woff2')
-			format('woff2'),
-		/* Super Modern Browsers */
-			url('../fonts/source-sans/source-sans-pro-v14-latin-regular.woff')
-			format('woff'),
-		/* Modern Browsers */
-			url('../fonts/source-sans/source-sans-pro-v14-latin-regular.ttf')
-			format('truetype'),
-		/* Safari, Android, iOS */
-			url('../fonts/source-sans/source-sans-pro-v14-latin-regular.svg#SourceSansPro')
-			format('svg'); /* Legacy iOS */
 }

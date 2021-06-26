@@ -6,6 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="fonts/style.css" />
 		<link rel="stylesheet" href="css/estilos.css" />
+		<link rel="stylesheet" href="css/fuentes.css" />
+		<link rel="stylesheet" href="css/login.css" />
+		<link rel="stylesheet" href="plugins/jquery/css/jquery.modal.min.css" />
 		<link
 			rel="stylesheet"
 			href="fonts/roboto/roboto-condensed-v19-latin-regular.svg"
@@ -14,6 +17,60 @@
 		<title>BRITANA</title>
 	</head>
 	<body>
+		<div id="login" class="modal">
+			<div class="logo_britana">
+				<div class="logo_img"></div>
+				<div class="tittle-login">Iniciar Sesión</div>
+			</div>
+			<div class="wabe-login" style="overflow: hidden">
+				<svg
+					viewBox="0 0 500 150"
+					preserveAspectRatio="none"
+					style="height: 100%; width: 100%"
+				>
+					<path
+						d="M-21.10,127.59 C142.55,44.70 330.47,24.96 515.01,131.54 L500.00,150.00 L0.00,150.00 Z"
+						style="stroke: none; fill: #e3f2fd"
+					></path>
+				</svg>
+			</div>
+			<div class="login-content">
+				<div class="wrapper-form-data">
+					<div class="input-data">
+						<input
+							type="text"
+							name="nombres"
+							size="40"
+							maxlength="50"
+							required
+						/>
+						<div class="underline"></div>
+						<label>Correo</label>
+					</div>
+				</div>
+				<div class="wrapper-form-data">
+					<div class="input-data">
+						<input
+							type="password"
+							name="password"
+							size="40"
+							maxlength="50"
+							id="password"
+							required
+						/>
+						<div class="underline"></div>
+						<label>Contraseña</label>
+					</div>
+					<div class="input-mostrar">
+						<span class="icon-view-show" id="mostrar_password"></span>
+					</div>
+				</div>
+				<div class="buttons-login">
+					<a class="button-cancelar" href="#" rel="modal:close">Cancelar</a>
+					<button class="button_enviar">Iniciar Sesión</button>
+				</div>
+			</div>
+		</div>
 		<div class="content-header">
 			<header>
 				<div class="logo-nav">
@@ -71,8 +128,8 @@
 							Lorem ipsum dolor sit amet consectetur adipisicing elit.
 						</div>
 						<div class="info-button-section">
-							<button class="button-info-section">
-								Lorem ipsum dolor sit.
+							<button class="button-info-section" id="OpenLogin">
+								Iniciar Sesión
 							</button>
 						</div>
 					</div>
@@ -103,7 +160,7 @@
 					</div>
 				</div>
 				<div class="container-target">
-					<div class="middle-target">
+					<div class="middle-target target_background">
 						<div class="tittle-target red">HORARIOS</div>
 						<div class="row-target">
 							<div class="age">
@@ -173,7 +230,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="middle-target">
+					<div class="middle-target target_background">
 						<div class="tittle-target blue">CLUB DE INGLÉS</div>
 						<div class="row-target text-blue">
 							Asesoría en Tareas (Todas las Asignaturas)
@@ -304,7 +361,6 @@
 				</div>
 			</div>
 		</section>
-
 		<section class="footer">
 			<div class="container-footer">
 				<div class="derechos-autor">Derechos de Autor 2021 - Colombia</div>
@@ -316,8 +372,35 @@
 				</div>
 			</div>
 		</section>
-
-		<script src="https://code.jquery.com/jquery-latest.js"></script>
+		<script src="plugins/jquery/js/jquery-3.2.1.min.js"></script>
+		<script src="plugins/jquery/js/jquery.modal.min.js"></script>
 		<script src="js/menu.js"></script>
+		<script>
+			$('#OpenLogin').click(function () {
+				OpenLogin();
+			});
+			function OpenLogin() {
+				$('#login').modal({
+					fadeDuration: 500,
+					fadeDelay: 0.2,
+				});
+			}
+		</script>
+		<script>
+			var m_estado = 0;
+			$('#mostrar_password').click(function () {
+				if (m_estado == 0) {
+					$('#password').prop('type', 'text');
+					$(this).removeClass('icon-view-show');
+					$(this).addClass('icon-view-hide');
+					m_estado = 1;
+				} else {
+					$('#password').prop('type', 'password');
+					$(this).removeClass('icon-view-hide');
+					$(this).addClass('icon-view-show');
+					m_estado = 0;
+				}
+			});
+		</script>
 	</body>
 </html>
